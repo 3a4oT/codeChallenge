@@ -20,7 +20,7 @@
 		FBE5D8BC1B63AE6D00629FBF /* SearchSuggestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8BB1B63AE6D00629FBF /* SearchSuggestionsModel.swift */; };
 		FBE5D8BE1B63B01C00629FBF /* SuggestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8BD1B63B01C00629FBF /* SuggestionsModel.swift */; };
 		FBE5D8C21B63BDA600629FBF /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8C11B63BDA600629FBF /* SuggestionModel.swift */; };
-		FBE5D8C61B63CC6A00629FBF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8C51B63CC6A00629FBF /* BaseModel.swift */; };
+		FBE5D8C81B63E1E200629FBF /* GroupType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8C71B63E1E200629FBF /* GroupType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		FBE5D8BB1B63AE6D00629FBF /* SearchSuggestionsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionsModel.swift; sourceTree = "<group>"; };
 		FBE5D8BD1B63B01C00629FBF /* SuggestionsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsModel.swift; sourceTree = "<group>"; };
 		FBE5D8C11B63BDA600629FBF /* SuggestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
-		FBE5D8C51B63CC6A00629FBF /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		FBE5D8C71B63E1E200629FBF /* GroupType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupType.swift; sourceTree = "<group>"; };
 		FD43646493AE1450FEA0A1A8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,10 +120,10 @@
 				FBE5D8B51B63809600629FBF /* Router.swift */,
 				FBE5D8B71B63812A00629FBF /* ConcurrentOperation.swift */,
 				FBE5D8B91B63814500629FBF /* NetworkOperation.swift */,
-				FBE5D8C51B63CC6A00629FBF /* BaseModel.swift */,
 				FBE5D8BB1B63AE6D00629FBF /* SearchSuggestionsModel.swift */,
 				FBE5D8BD1B63B01C00629FBF /* SuggestionsModel.swift */,
 				FBE5D8C11B63BDA600629FBF /* SuggestionModel.swift */,
+				FBE5D8C71B63E1E200629FBF /* GroupType.swift */,
 				FBE5D8991B637D0B00629FBF /* Main.storyboard */,
 				FBE5D89C1B637D0B00629FBF /* Images.xcassets */,
 				FBE5D89E1B637D0B00629FBF /* LaunchScreen.xib */,
@@ -311,7 +311,7 @@
 				FBE5D8B81B63812A00629FBF /* ConcurrentOperation.swift in Sources */,
 				FBE5D8C21B63BDA600629FBF /* SuggestionModel.swift in Sources */,
 				FBE5D8981B637D0B00629FBF /* ViewController.swift in Sources */,
-				FBE5D8C61B63CC6A00629FBF /* BaseModel.swift in Sources */,
+				FBE5D8C81B63E1E200629FBF /* GroupType.swift in Sources */,
 				FBE5D8BA1B63814500629FBF /* NetworkOperation.swift in Sources */,
 				FBE5D8BC1B63AE6D00629FBF /* SearchSuggestionsModel.swift in Sources */,
 				FBE5D8B61B63809600629FBF /* Router.swift in Sources */,

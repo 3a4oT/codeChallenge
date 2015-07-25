@@ -44,7 +44,7 @@ class NetworkOperation: ConcurrentOperation {
     
     // we'll also support canceling the request, in case we need it
     override func cancel() {
-        print("canceling operation")
+        println("canceling operation")
         request?.cancel()
         super.cancel()
     }

@@ -9,11 +9,11 @@
 import UIKit
 import ObjectMapper
 
-class SearchSuggestionsModel: Mappable {
+class SearchSuggestionsModel: Mappable, SequenceType {
     
     var searchSuggestions: [SuggestionsModel]?
     
-     init() {}
+    init() {}
     
     required init?(_ map: Map) {
         mapping(map)
@@ -21,5 +21,16 @@ class SearchSuggestionsModel: Mappable {
     
     func mapping(map: Map) {
         searchSuggestions <- map["search_suggestions"]
+    }
+    //MARK : SequenceType protocol
+    func generate() -> GeneratorOf<SuggestionsModel> {
+        var nextIndex = searchSuggestions!.count-1
+        
+        return GeneratorOf<SuggestionsModel> {
+            if (nextIndex < 0) {
+                return nil
+            }
+            return self.searchSuggestions![nextIndex--]
+        }
     }
 }

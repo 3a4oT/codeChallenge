@@ -9,10 +9,10 @@
 import UIKit
 import ObjectMapper
 
-class SuggestionsModel: Mappable {
-   
-   var suggestions: [SuggestionModel]?
-   var type: String?
+class SuggestionsModel: Mappable, SequenceType  {
+    
+    var suggestions: [SuggestionModel]?
+    var type: String?
     
     init() {}
     
@@ -25,5 +25,15 @@ class SuggestionsModel: Mappable {
         type <- map["type"]
     }
     
-    
+    //MARK : SequenceType protocol
+    func generate() -> GeneratorOf<SuggestionModel> {
+        var nextIndex = suggestions!.count-1
+        
+        return GeneratorOf<SuggestionModel> {
+            if (nextIndex < 0) {
+                return nil
+            }
+            return self.suggestions![nextIndex--]
+        }
+    }
 }

@@ -14,7 +14,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     var que: NSOperationQueue?
     var netOperation: NetworkOperation?
     var searchActive : Bool = false
-    var items: [String] = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
+    var items: [String] = [] //["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
     var filtered:[String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,21 +72,32 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        
+        var result: [String] = []
         if count(searchText) > 2 {
             
             if (!que!.operations.isEmpty) {
-                //netOperation!.cancel()
-                que?.cancelAllOperations()
+                netOperation!.cancel()
+                //que?.cancelAllOperations()
             }
             
             netOperation = NetworkOperation(router: Router.Search(q: searchText)){
                 responseObject , error in
-                let obj: SearchSuggestionsModel = responseObject as! SearchSuggestionsModel
-                //print(obj.searchSuggestions?.first?.suggestions?.first?.localizedName!)
+                
+                if let obj: SearchSuggestionsModel = responseObject as? SearchSuggestionsModel {
+                    for searchSuggestions in obj {
+                        for suggestion in searchSuggestions {
+                            println(suggestion.localizedName!)
+                            
+                            result.append(suggestion.localizedName!)
+                        }
+                    }
+                    self.items.removeAll(keepCapacity: false)
+                    self.items = result
+                }
                 
             }
             que?.addOperation(netOperation!)
+            
             filtered = items.filter({ (text) -> Bool in
                 let tmp: NSString = text
                 let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
