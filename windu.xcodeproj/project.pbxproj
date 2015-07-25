@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FBE5D8961B637D0B00629FBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8951B637D0B00629FBF /* AppDelegate.swift */; };
+		FBE5D8981B637D0B00629FBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8971B637D0B00629FBF /* ViewController.swift */; };
+		FBE5D89B1B637D0B00629FBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE5D8991B637D0B00629FBF /* Main.storyboard */; };
+		FBE5D89D1B637D0B00629FBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBE5D89C1B637D0B00629FBF /* Images.xcassets */; };
+		FBE5D8A01B637D0B00629FBF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBE5D89E1B637D0B00629FBF /* LaunchScreen.xib */; };
+		FBE5D8AC1B637D0B00629FBF /* winduTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8AB1B637D0B00629FBF /* winduTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FBE5D8A61B637D0B00629FBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBE5D8881B637D0A00629FBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FBE5D88F1B637D0A00629FBF;
+			remoteInfo = windu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FBE5D8901B637D0A00629FBF /* windu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = windu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBE5D8941B637D0B00629FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBE5D8951B637D0B00629FBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FBE5D8971B637D0B00629FBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FBE5D89A1B637D0B00629FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FBE5D89C1B637D0B00629FBF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FBE5D89F1B637D0B00629FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FBE5D8A51B637D0B00629FBF /* winduTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = winduTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBE5D8AA1B637D0B00629FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBE5D8AB1B637D0B00629FBF /* winduTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winduTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBE5D88D1B637D0A00629FBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBE5D8A21B637D0B00629FBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FBE5D8871B637D0A00629FBF = {
+			isa = PBXGroup;
+			children = (
+				FBE5D8921B637D0A00629FBF /* windu */,
+				FBE5D8A81B637D0B00629FBF /* winduTests */,
+				FBE5D8911B637D0A00629FBF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FBE5D8911B637D0A00629FBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBE5D8901B637D0A00629FBF /* windu.app */,
+				FBE5D8A51B637D0B00629FBF /* winduTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBE5D8921B637D0A00629FBF /* windu */ = {
+			isa = PBXGroup;
+			children = (
+				FBE5D8951B637D0B00629FBF /* AppDelegate.swift */,
+				FBE5D8971B637D0B00629FBF /* ViewController.swift */,
+				FBE5D8991B637D0B00629FBF /* Main.storyboard */,
+				FBE5D89C1B637D0B00629FBF /* Images.xcassets */,
+				FBE5D89E1B637D0B00629FBF /* LaunchScreen.xib */,
+				FBE5D8931B637D0B00629FBF /* Supporting Files */,
+			);
+			path = windu;
+			sourceTree = "<group>";
+		};
+		FBE5D8931B637D0B00629FBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBE5D8941B637D0B00629FBF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FBE5D8A81B637D0B00629FBF /* winduTests */ = {
+			isa = PBXGroup;
+			children = (
+				FBE5D8AB1B637D0B00629FBF /* winduTests.swift */,
+				FBE5D8A91B637D0B00629FBF /* Supporting Files */,
+			);
+			path = winduTests;
+			sourceTree = "<group>";
+		};
+		FBE5D8A91B637D0B00629FBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBE5D8AA1B637D0B00629FBF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FBE5D88F1B637D0A00629FBF /* windu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBE5D8AF1B637D0B00629FBF /* Build configuration list for PBXNativeTarget "windu" */;
+			buildPhases = (
+				FBE5D88C1B637D0A00629FBF /* Sources */,
+				FBE5D88D1B637D0A00629FBF /* Frameworks */,
+				FBE5D88E1B637D0A00629FBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = windu;
+			productName = windu;
+			productReference = FBE5D8901B637D0A00629FBF /* windu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FBE5D8A41B637D0B00629FBF /* winduTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBE5D8B21B637D0B00629FBF /* Build configuration list for PBXNativeTarget "winduTests" */;
+			buildPhases = (
+				FBE5D8A11B637D0B00629FBF /* Sources */,
+				FBE5D8A21B637D0B00629FBF /* Frameworks */,
+				FBE5D8A31B637D0B00629FBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBE5D8A71B637D0B00629FBF /* PBXTargetDependency */,
+			);
+			name = winduTests;
+			productName = winduTests;
+			productReference = FBE5D8A51B637D0B00629FBF /* winduTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FBE5D8881B637D0A00629FBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Petro Rovenskyy";
+				TargetAttributes = {
+					FBE5D88F1B637D0A00629FBF = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					FBE5D8A41B637D0B00629FBF = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = FBE5D88F1B637D0A00629FBF;
+					};
+				};
+			};
+			buildConfigurationList = FBE5D88B1B637D0A00629FBF /* Build configuration list for PBXProject "windu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FBE5D8871B637D0A00629FBF;
+			productRefGroup = FBE5D8911B637D0A00629FBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBE5D88F1B637D0A00629FBF /* windu */,
+				FBE5D8A41B637D0B00629FBF /* winduTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FBE5D88E1B637D0A00629FBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE5D89B1B637D0B00629FBF /* Main.storyboard in Resources */,
+				FBE5D8A01B637D0B00629FBF /* LaunchScreen.xib in Resources */,
+				FBE5D89D1B637D0B00629FBF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBE5D8A31B637D0B00629FBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FBE5D88C1B637D0A00629FBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE5D8981B637D0B00629FBF /* ViewController.swift in Sources */,
+				FBE5D8961B637D0B00629FBF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBE5D8A11B637D0B00629FBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE5D8AC1B637D0B00629FBF /* winduTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FBE5D8A71B637D0B00629FBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FBE5D88F1B637D0A00629FBF /* windu */;
+			targetProxy = FBE5D8A61B637D0B00629FBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FBE5D8991B637D0B00629FBF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBE5D89A1B637D0B00629FBF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FBE5D89E1B637D0B00629FBF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBE5D89F1B637D0B00629FBF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FBE5D8AD1B637D0B00629FBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FBE5D8AE1B637D0B00629FBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FBE5D8B01B637D0B00629FBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = windu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FBE5D8B11B637D0B00629FBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = windu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FBE5D8B31B637D0B00629FBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = winduTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/windu.app/windu";
+			};
+			name = Debug;
+		};
+		FBE5D8B41B637D0B00629FBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = winduTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/windu.app/windu";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FBE5D88B1B637D0A00629FBF /* Build configuration list for PBXProject "windu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBE5D8AD1B637D0B00629FBF /* Debug */,
+				FBE5D8AE1B637D0B00629FBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBE5D8AF1B637D0B00629FBF /* Build configuration list for PBXNativeTarget "windu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBE5D8B01B637D0B00629FBF /* Debug */,
+				FBE5D8B11B637D0B00629FBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FBE5D8B21B637D0B00629FBF /* Build configuration list for PBXNativeTarget "winduTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBE5D8B31B637D0B00629FBF /* Debug */,
+				FBE5D8B41B637D0B00629FBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FBE5D8881B637D0A00629FBF /* Project object */;
+}
