@@ -3,5 +3,5 @@ platform :ios, '8.0'
 use_frameworks!
 
 pod 'Alamofire', '~> 1.2.3' # network
-pod 'EasyMapping', '~> 0.15.0' # Objective-C pod
+pod 'AlamofireObjectMapper', '~> 0.5'
 pod 'SwiftyJSON', '~> 2.2.0' # serializations

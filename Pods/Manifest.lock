@@ -1,18 +1,20 @@
 PODS:
   - Alamofire (1.2.3)
-  - EasyMapping (0.15.1):
-    - EasyMapping/Core (= 0.15.1)
-  - EasyMapping/Core (0.15.1)
+  - AlamofireObjectMapper (0.5):
+    - Alamofire (~> 1.2)
+    - ObjectMapper (~> 0.10)
+  - ObjectMapper (0.12)
   - SwiftyJSON (2.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 1.2.3)
-  - EasyMapping (~> 0.15.0)
+  - AlamofireObjectMapper (~> 0.5)
   - SwiftyJSON (~> 2.2.0)
 
 SPEC CHECKSUMS:
   Alamofire: 5550bf0b575ed1a4bf9be572f9463e1015cc169e
-  EasyMapping: b5e965fd09ace6f175f0116968bc98f810552032
+  AlamofireObjectMapper: 898d4ef5c6fc076331406f43702dc06d2c9c7513
+  ObjectMapper: ef4a369cbab75546029ceb7e8155772b5f8e8841
   SwiftyJSON: 0b3e6c07af17ff745e77e8e9984097b55c956e5c
 
 COCOAPODS: 0.37.2

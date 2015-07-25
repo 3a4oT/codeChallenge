@@ -14,6 +14,13 @@
 		FBE5D89D1B637D0B00629FBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBE5D89C1B637D0B00629FBF /* Images.xcassets */; };
 		FBE5D8A01B637D0B00629FBF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBE5D89E1B637D0B00629FBF /* LaunchScreen.xib */; };
 		FBE5D8AC1B637D0B00629FBF /* winduTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8AB1B637D0B00629FBF /* winduTests.swift */; };
+		FBE5D8B61B63809600629FBF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8B51B63809600629FBF /* Router.swift */; };
+		FBE5D8B81B63812A00629FBF /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8B71B63812A00629FBF /* ConcurrentOperation.swift */; };
+		FBE5D8BA1B63814500629FBF /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8B91B63814500629FBF /* NetworkOperation.swift */; };
+		FBE5D8BC1B63AE6D00629FBF /* SearchSuggestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8BB1B63AE6D00629FBF /* SearchSuggestionsModel.swift */; };
+		FBE5D8BE1B63B01C00629FBF /* SuggestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8BD1B63B01C00629FBF /* SuggestionsModel.swift */; };
+		FBE5D8C21B63BDA600629FBF /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8C11B63BDA600629FBF /* SuggestionModel.swift */; };
+		FBE5D8C61B63CC6A00629FBF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D8C51B63CC6A00629FBF /* BaseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +46,13 @@
 		FBE5D8A51B637D0B00629FBF /* winduTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = winduTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE5D8AA1B637D0B00629FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBE5D8AB1B637D0B00629FBF /* winduTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winduTests.swift; sourceTree = "<group>"; };
+		FBE5D8B51B63809600629FBF /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FBE5D8B71B63812A00629FBF /* ConcurrentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentOperation.swift; sourceTree = "<group>"; };
+		FBE5D8B91B63814500629FBF /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		FBE5D8BB1B63AE6D00629FBF /* SearchSuggestionsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionsModel.swift; sourceTree = "<group>"; };
+		FBE5D8BD1B63B01C00629FBF /* SuggestionsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsModel.swift; sourceTree = "<group>"; };
+		FBE5D8C11B63BDA600629FBF /* SuggestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
+		FBE5D8C51B63CC6A00629FBF /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		FD43646493AE1450FEA0A1A8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +117,13 @@
 			children = (
 				FBE5D8951B637D0B00629FBF /* AppDelegate.swift */,
 				FBE5D8971B637D0B00629FBF /* ViewController.swift */,
+				FBE5D8B51B63809600629FBF /* Router.swift */,
+				FBE5D8B71B63812A00629FBF /* ConcurrentOperation.swift */,
+				FBE5D8B91B63814500629FBF /* NetworkOperation.swift */,
+				FBE5D8C51B63CC6A00629FBF /* BaseModel.swift */,
+				FBE5D8BB1B63AE6D00629FBF /* SearchSuggestionsModel.swift */,
+				FBE5D8BD1B63B01C00629FBF /* SuggestionsModel.swift */,
+				FBE5D8C11B63BDA600629FBF /* SuggestionModel.swift */,
 				FBE5D8991B637D0B00629FBF /* Main.storyboard */,
 				FBE5D89C1B637D0B00629FBF /* Images.xcassets */,
 				FBE5D89E1B637D0B00629FBF /* LaunchScreen.xib */,
@@ -287,8 +308,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBE5D8B81B63812A00629FBF /* ConcurrentOperation.swift in Sources */,
+				FBE5D8C21B63BDA600629FBF /* SuggestionModel.swift in Sources */,
 				FBE5D8981B637D0B00629FBF /* ViewController.swift in Sources */,
+				FBE5D8C61B63CC6A00629FBF /* BaseModel.swift in Sources */,
+				FBE5D8BA1B63814500629FBF /* NetworkOperation.swift in Sources */,
+				FBE5D8BC1B63AE6D00629FBF /* SearchSuggestionsModel.swift in Sources */,
+				FBE5D8B61B63809600629FBF /* Router.swift in Sources */,
 				FBE5D8961B637D0B00629FBF /* AppDelegate.swift in Sources */,
+				FBE5D8BE1B63B01C00629FBF /* SuggestionsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = windu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -431,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = windu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
