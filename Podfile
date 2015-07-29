@@ -4,4 +4,4 @@ use_frameworks!
 
 pod 'Alamofire', '~> 1.2.3' # network
 pod 'AlamofireObjectMapper', '~> 0.5'
-pod 'SwiftyJSON', '~> 2.2.0' # serializations
+

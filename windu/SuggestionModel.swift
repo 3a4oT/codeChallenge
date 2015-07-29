@@ -10,17 +10,14 @@ import UIKit
 import ObjectMapper
 
 class SuggestionModel: Mappable {
-   
+    
     var localizedCountryName: String?
     var localizedName: String?
     var offerCount: String?
     var searchKeys: Array<String>?
     
-    
-    init() {}
-    
-    required init?(_ map: Map) {
-        mapping(map)
+    static func newInstance() -> Mappable {
+        return SuggestionModel()
     }
     
     func mapping(map: Map) {
@@ -29,5 +26,5 @@ class SuggestionModel: Mappable {
         offerCount <- map["offer_count"]
         searchKeys <- map["search_keys"]
     }
-
+    
 }

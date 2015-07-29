@@ -11,19 +11,21 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     @IBOutlet weak var displayTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    let cellIdentifier = "cell"
     var que: NSOperationQueue?
     var netOperation: NetworkOperation?
     var searchActive : Bool = false
-    var items: [String] = [] //["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
-    var filtered:[String] = []
+    var types: [String] = []
+    var suggestionsList: Array<SuggestionsModel>  = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         displayTableView.delegate = self
         displayTableView.dataSource = self
         searchBar.delegate = self
-        que = NSOperationQueue()
-        self.displayTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        que = NSOperationQueue.mainQueue()
+        self.displayTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         
     }
     
@@ -33,22 +35,55 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     // MARK: table view delegates
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        if suggestionsList.count > 0 {
+            return self.suggestionsList.count
+        }
+        return 0
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(searchActive) {
-            return filtered.count
+        
+        switch (section) {
+        case GroupType.Cities.index:
+            return suggestionsList[section].suggestions!.count
+        case GroupType.Regions.index:
+            return suggestionsList[section].suggestions!.count
+        case GroupType.Districts.index:
+            return suggestionsList[section].suggestions!.count
+        default: return 0
         }
-        return items.count;
+        
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch(section) {
+        case  GroupType.Cities.index:
+            return GroupType.Cities.rawValue
+        case GroupType.Regions.index:
+            return GroupType.Regions.rawValue
+        case GroupType.Districts.index:
+            return GroupType.Districts.rawValue
+        default: return "nothing to display"
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = displayTableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell;
-        if(searchActive){
-            cell.textLabel?.text = filtered[indexPath.row]
-        } else {
-            cell.textLabel?.text = items[indexPath.row];
+        
+        let cell = displayTableView.dequeueReusableCellWithIdentifier(self.cellIdentifier) as! UITableViewCell
+        let section = indexPath.section
+        let row = indexPath.row
+        
+        if(self.searchActive) {
+            switch (section) {
+            case GroupType.Cities.index:
+                cell.textLabel?.text = suggestionsList[section].suggestions![row].localizedName!
+            case GroupType.Regions.index:
+                cell.textLabel?.text = suggestionsList[section].suggestions![row].localizedName!
+            case GroupType.Districts.index:
+                cell.textLabel?.text = suggestionsList[section].suggestions![row].localizedName!
+            default: break
+            }
+            
         }
         
         return cell;
@@ -72,7 +107,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        var result: [String] = []
+        
+        self.suggestionsList.removeAll(keepCapacity: false)
         if count(searchText) > 2 {
             
             if (!que!.operations.isEmpty) {
@@ -80,35 +116,32 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                 //que?.cancelAllOperations()
             }
             
-            netOperation = NetworkOperation(router: Router.Search(q: searchText)){
+            netOperation = NetworkOperation(router: Router.Search(q: searchText)) {
                 responseObject , error in
-                
                 if let obj: SearchSuggestionsModel = responseObject as? SearchSuggestionsModel {
                     for searchSuggestions in obj {
-                        for suggestion in searchSuggestions {
-                            println(suggestion.localizedName!)
-                            
-                            result.append(suggestion.localizedName!)
-                        }
+                        searchSuggestions.suggestions = searchSuggestions.suggestions!.filter({ (sug: SuggestionModel) in
+                            let tmp: NSString = sug.localizedName!
+                            let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+                            return range.location != NSNotFound
+                        })
+                        self.suggestionsList.append(searchSuggestions)
                     }
-                    self.items.removeAll(keepCapacity: false)
-                    self.items = result
+                    
                 }
                 
+                if(self.suggestionsList.count == 0) {
+                    self.searchActive = false;
+                } else {
+                    self.searchActive = true;
+                }
+                self.displayTableView.reloadData()
+                
             }
+            netOperation?.qualityOfService = NSQualityOfService.Background
+            netOperation?.queuePriority = NSOperationQueuePriority.High
             que?.addOperation(netOperation!)
             
-            filtered = items.filter({ (text) -> Bool in
-                let tmp: NSString = text
-                let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
-                return range.location != NSNotFound
-            })
-            if(filtered.count == 0){
-                searchActive = false;
-            } else {
-                searchActive = true;
-            }
-            self.displayTableView.reloadData()
         }
     }
     

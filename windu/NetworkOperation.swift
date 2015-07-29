@@ -16,7 +16,7 @@ class NetworkOperation: ConcurrentOperation {
     weak var request: Alamofire.Request?
     let router: Router
     let manager: Manager
-
+    
     
     init(router: Router, networkOperationCompletionHandler: (responseObject: AnyObject?, error: NSError?) -> ()) {
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()

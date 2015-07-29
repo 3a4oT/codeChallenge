@@ -13,10 +13,8 @@ class SearchSuggestionsModel: Mappable, SequenceType {
     
     var searchSuggestions: [SuggestionsModel]?
     
-    init() {}
-    
-    required init?(_ map: Map) {
-        mapping(map)
+    static func newInstance() -> Mappable {
+        return SearchSuggestionsModel()
     }
     
     func mapping(map: Map) {

@@ -9,6 +9,7 @@
 import UIKit
 
 class ConcurrentOperation: NSOperation {
+    
     override var asynchronous: Bool {
         return true
     }

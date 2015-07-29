@@ -14,10 +14,8 @@ class SuggestionsModel: Mappable, SequenceType  {
     var suggestions: [SuggestionModel]?
     var type: String?
     
-    init() {}
-    
-    required init?(_ map: Map) {
-        mapping(map)
+    static func newInstance() -> Mappable {
+        return SuggestionsModel()
     }
     
     func mapping(map: Map) {

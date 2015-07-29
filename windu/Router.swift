@@ -11,6 +11,7 @@ import Alamofire
 
 
 enum Host {
+    
     case RequestToken
     case RequestSearchSuggestion
    
@@ -26,6 +27,7 @@ enum Host {
 }
 
 enum Router: URLRequestConvertible {
+    
     static let baseURLString = Host.RequestSearchSuggestion.host
     
     case Login
